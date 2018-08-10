@@ -4,8 +4,8 @@ class Post extends React.Component {
   render () {
     return (
       <React.Fragment>
-        Title: {this.props.title}
-        Body: {this.props.body}
+          <h2>Title: {this.props.title}</h2>
+          <p>Body: {this.props.body}</p>
       </React.Fragment>
     );
   }
