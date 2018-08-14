@@ -6,7 +6,7 @@
 //= require_tree ./channels
 
 (function() {
-  this.App || (this.App = {});
+  this.Home || (this.Home = {});
 
   App.cable = ActionCable.createConsumer();
 
