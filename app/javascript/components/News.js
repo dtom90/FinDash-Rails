@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, Glyphicon } from 'react-bootstrap';
 // import 'daterangepicker.css';
 import Util from './Util'
@@ -6,7 +6,7 @@ let DateRangePicker = require('react-bootstrap-daterangepicker');
 let moment = require('moment');
 const Fetching = Util.Fetching;
 
-class News extends Component {
+class News extends React.Component {
     
     constructor(props) {
         super(props);

@@ -8,16 +8,16 @@ class ClientList extends React.Component {
         super(props);
         this.state = {
             clients: [],
-            fetching: true
+            fetching: false
         }
     }
     
-    // componentDidMount() {
-    //     this.setState({fetching: true});
-    //     fetch('/api/users/clients')
-    //         .then(res => res.json())
-    //         .then(clients => this.setState({clients: clients, fetching: false}));
-    // }
+    componentDidMount() {
+        this.setState({fetching: true});
+        fetch('/api/users/clients')
+            .then(res => res.json())
+            .then(clients => this.setState({clients: clients, fetching: false}));
+    }
     
     render() {
         if(this.state.fetching)
