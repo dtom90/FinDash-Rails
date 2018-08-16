@@ -1,27 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Util from '../Util'
 let Fetching = Util.Fetching;
 
-class ClientList extends Component {
+class ClientList extends React.Component {
+    
     constructor(props) {
         super(props);
         this.state = {
             clients: [],
-            fetching: false
+            fetching: true
         }
     }
     
-    componentDidMount() {
-        this.setState({fetching: true});
-        fetch('/api/users/clients')
-            .then(res => res.json())
-            .then(clients => this.setState({clients: clients, fetching: false}));
-    }
+    // componentDidMount() {
+    //     this.setState({fetching: true});
+    //     fetch('/api/users/clients')
+    //         .then(res => res.json())
+    //         .then(clients => this.setState({clients: clients, fetching: false}));
+    // }
     
     render() {
         if(this.state.fetching)
             return (<Fetching resource='Clients'/>);
-        return (<div>{clientList(this.state.clients)}</div>);
+        return (<React.Fragment>{clientList(this.state.clients)}</React.Fragment>);
     }
 }
 

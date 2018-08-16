@@ -2,6 +2,10 @@ import React from "react"
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 
+import StockIndices from './stock/Indices';
+import ClientList from './client/List';
+// import News from './News';
+
 BigCalendar.setLocalizer(
     BigCalendar.momentLocalizer(moment)
 );
@@ -14,7 +18,7 @@ class Home extends React.Component {
     
           <div className="container">
         
-              {/*<StockIndices />*/}
+              <StockIndices />
         
               <div className="row">
                   <div className="col-md-8">
@@ -26,7 +30,7 @@ class Home extends React.Component {
                   <div className="col-md-4">
                 
                       <h1>Clients</h1>
-                      {/*<ClientList />*/}
+                      <ClientList />
             
                   </div>
               </div>
